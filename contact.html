@@ -8,9 +8,11 @@
 
 <title>Contact Us | Blue Skite</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -20,15 +22,32 @@
 
 <div class="container nav">
 
-<div class="logo">Blue Skite</div>
+<div class="logo">
+Blue Skite
+</div>
 
 <nav>
+
 <ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="products.html">Products</a></li>
-<li><a href="contact.html" class="active">Contact</a></li>
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="about.html">About</a>
+</li>
+
+<li>
+<a href="products.html">Products</a>
+</li>
+
+<li>
+<a href="contact.html" class="active">Contact</a>
+</li>
+
 </ul>
+
 </nav>
 
 </div>
@@ -36,64 +55,95 @@
 </header>
 
 
-<main class="page">
+<main class="contact-page">
 
 <div class="container">
 
-<h1 style="text-align:center;color:#1F5F8B;margin-bottom:15px;">
-Contact Us
-</h1>
+<div class="contact-heading">
 
-<p style="text-align:center;margin-bottom:50px;">
-We would be happy to hear from you. Please get in touch with Blue Skite
-for enquiries about our products and services.
+<h1>Contact Us</h1>
+
+<p>
+We'd love to hear from you. Get in touch with Blue Skite
+for enquiries about our digital products and business services.
 </p>
 
+</div>
 
-<div class="contact-grid">
+
+<div class="contact-layout">
 
 
-<!-- Contact Details -->
+<!-- CONTACT INFORMATION -->
 
-<div class="contact-info">
+<div class="contact-details">
 
 <h2>Get in Touch</h2>
 
-<div class="contact-item">
 
-<h3>📍 Address</h3>
+<div class="info-box">
+
+<div class="info-icon">
+📍
+</div>
+
+<div>
+
+<h3>Our Address</h3>
 
 <p>
+
 11 MORLY Street<br>
 Sutton in Ashfield<br>
 Nottingham<br>
 NG17 4 EE
+
 </p>
 
 </div>
 
+</div>
 
-<div class="contact-item">
 
-<h3>✉️ Email</h3>
+<div class="info-box">
+
+<div class="info-icon">
+✉️
+</div>
+
+<div>
+
+<h3>Email Us</h3>
 
 <p>
+
 <a href="mailto:bskite2@gmail.com">
 bskite2@gmail.com
 </a>
+
 </p>
 
 </div>
 
+</div>
 
-<div class="contact-item">
 
-<h3>📞 Contact Number</h3>
+<div class="info-box">
+
+<div class="info-icon">
+📞
+</div>
+
+<div>
+
+<h3>Call Us</h3>
 
 <p>
+
 <a href="tel:07762466236">
 07762 466236
 </a>
+
 </p>
 
 </div>
@@ -101,39 +151,69 @@ bskite2@gmail.com
 </div>
 
 
-<!-- Contact Form -->
+</div>
 
-<div class="contact-form">
+
+<!-- CONTACT FORM -->
+
+<div class="contact-form-box">
 
 <h2>Send Us a Message</h2>
 
-<form>
+
+<form id="contactForm">
+
+
+<label for="name">
+Full Name
+</label>
 
 <input
+id="name"
 type="text"
-placeholder="Full Name"
+placeholder="Enter your full name"
 required
 >
 
+
+<label for="email">
+Email Address
+</label>
+
 <input
+id="email"
 type="email"
-placeholder="Email Address"
+placeholder="Enter your email address"
 required
 >
 
+
+<label for="phone">
+Phone Number
+</label>
+
 <input
+id="phone"
 type="tel"
-placeholder="Phone Number"
+placeholder="Enter your phone number"
 >
+
+
+<label for="message">
+Message
+</label>
 
 <textarea
-placeholder="Your Message"
+id="message"
+placeholder="How can we help you?"
 required
 ></textarea>
+
 
 <button type="submit">
 Send Message
 </button>
+
 
 </form>
 
@@ -154,7 +234,7 @@ Send Message
 <h3>Blue Skite</h3>
 
 <p>
-Digital Products & Business Services
+Digital Products &amp; Business Services
 </p>
 
 <p>
@@ -162,16 +242,17 @@ Digital Products & Business Services
 </p>
 
 <p>
-Email:
+
 <a href="mailto:bskite2@gmail.com">
 bskite2@gmail.com
 </a>
+
 &nbsp; | &nbsp;
 
-Tel:
 <a href="tel:07762466236">
 07762 466236
 </a>
+
 </p>
 
 <p>
@@ -183,7 +264,20 @@ Tel:
 </footer>
 
 
-<script src="script.js"></script>
+<script>
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+
+event.preventDefault();
+
+alert("Thank you for contacting Blue Skite. We will get back to you shortly.");
+
+this.reset();
+
+});
+
+</script>
+
 
 </body>
 
